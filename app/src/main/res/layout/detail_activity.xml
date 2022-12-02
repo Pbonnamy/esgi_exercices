@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,7 +12,7 @@
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:text="Parking Receipt"
         android:textStyle="bold"
         android:textSize="20sp" />
@@ -39,7 +38,7 @@
                 android:layout_height="50dp"
                 app:layout_constraintStart_toEndOf="@id/guidelineL"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/illu_parking" />
+                app:srcCompat="@drawable/illu_parking" />
 
             <TextView
                 android:id="@+id/title"
@@ -235,7 +234,7 @@
                 app:layout_constraintStart_toStartOf="@id/guidelineR"
                 app:layout_constraintTop_toBottomOf="@id/divider2"
                 android:paddingBottom="20dp"
-                tools:srcCompat="@drawable/ic_barcode" />
+                app:srcCompat="@drawable/ic_barcode" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

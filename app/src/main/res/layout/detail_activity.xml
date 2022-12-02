@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Parking Receipt"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineT"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/receipt_image"
+                android:layout_marginTop="15dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toEndOf="@id/guidelineL"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/illu_parking" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toEndOf="@+id/receipt_image"
+                app:layout_constraintTop_toTopOf="@+id/receipt_image"
+                android:text="Parking Receipt"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                app:layout_constraintStart_toStartOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parking Receipt"
+                android:textSize="15sp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="15dp"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="15dp"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/divider1"
+                android:layout_marginTop="10dp"
+                android:text="Name"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/name"
+                android:layout_marginTop="5dp"
+                android:text="Kai Havertz"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/vehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/guidelineM"
+                app:layout_constraintTop_toBottomOf="@+id/divider1"
+                android:layout_marginTop="10dp"
+                android:text="Vehicle"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/vehicle_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/guidelineM"
+                app:layout_constraintTop_toBottomOf="@+id/vehicle"
+                android:layout_marginTop="5dp"
+                android:text="Kai Havertz"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/name_value"
+                android:layout_marginTop="10dp"
+                android:text="Parking Pass"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/parking_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/parking"
+                android:layout_marginTop="5dp"
+                android:text="#23-56-76"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/parking_spot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/guidelineM"
+                app:layout_constraintTop_toBottomOf="@+id/vehicle_value"
+                android:layout_marginTop="10dp"
+                android:text="Parking Spot"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/parking_spot_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/guidelineM"
+                app:layout_constraintTop_toBottomOf="@+id/parking_spot"
+                android:layout_marginTop="5dp"
+                android:text="#A-13 (F1)"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/parking_value"
+                android:layout_marginTop="10dp"
+                android:text="Duration"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/duration_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/duration"
+                android:layout_marginTop="5dp"
+                android:text="2.5 hours"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/guidelineM"
+                app:layout_constraintTop_toBottomOf="@+id/parking_spot_value"
+                android:layout_marginTop="10dp"
+                android:text="Payment Method"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/payment_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/guidelineM"
+                app:layout_constraintTop_toBottomOf="@+id/payment"
+                android:layout_marginTop="5dp"
+                android:text="Credit Card"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/divider2"
+                app:layout_constraintStart_toStartOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/duration_value"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="20dp"
+                android:background="@android:color/darker_gray"/>
+
+            <View
+                android:id="@+id/divider1"
+                app:layout_constraintStart_toStartOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/receipt_image"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="20dp"
+                android:background="@android:color/darker_gray"/>
+
+            <ImageView
+                android:id="@+id/barcode"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/guidelineL"
+                app:layout_constraintStart_toStartOf="@id/guidelineR"
+                app:layout_constraintTop_toBottomOf="@id/divider2"
+                android:paddingBottom="20dp"
+                tools:srcCompat="@drawable/ic_barcode" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Download receipt"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/blue_primary"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineT"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
